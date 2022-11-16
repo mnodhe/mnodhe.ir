@@ -1,0 +1,52 @@
+@import "variable.scss";
+
+@mixin Font_regular($fontsize) {
+    font-family: "??" !important;
+    font-size: $fontsize !important;
+  }
+  
+  @mixin Font_Light($fontsize) {
+    font-family: "??" !important;
+    font-size: $fontsize !important;
+  }
+  
+  @mixin Font_Bold($fontsize) {
+    font-family: "??" !important;
+    font-size: $fontsize !important;
+  }
+  
+@mixin noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+@mixin MyShadow {
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+@mixin MyBorderRadius {
+  border-radius: 15px !important;
+}
+@mixin MyBorderRadiuskam {
+  border-radius: 8px !important;
+}
+
+@mixin MyCycleRadius {
+  border-radius: 100% !important;
+}
+
+@mixin Myimageborder {
+  @include MyBorderRadius();
+  @include MyShadow();
+  border: 1px solid $MenuBottomcolor !important;
+}
