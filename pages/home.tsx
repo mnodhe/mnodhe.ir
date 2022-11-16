@@ -4,7 +4,7 @@ import { useAuth } from '../Components/Auth/hooks/useAuth';
 import { LangHelper } from '../Helper/MultiLangHelper/LangHelper';
 
 export default function Home() {
-  const { } = useAuth()
+  const { data } = useAuth()
   return (
     <main>
       <Head>
