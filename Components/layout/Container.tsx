@@ -14,7 +14,7 @@ import { SetLogin_Action } from "../../Helper/Redux/Actions/Auth/AuthAction";
 import { RefreshToken_Res_Interface } from "../../Helper/Interfaces/API_Interface";
 import { getToken_Localstorage } from "../../Helper/LocalStorageHandler/LocalStorageHelper";
 import Header from "./Header/Header";
-import Footer from "../Footer/Footer";
+import Footer from "./Footer/Footer";
 
 export default function Container({ children }: any) {
     const dispatch = useDispatch();
