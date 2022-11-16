@@ -18,6 +18,7 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from '../Helper/react-query/queryClient';
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../styles/globals.css';
+import Loading from '../Components/layout/Loading';
 
 export const ColorModeContext = createContext({ toggleColorMode: () => { } });
 
@@ -108,6 +109,7 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
         <ColorModeContext.Provider value={colorMode}>
           <ThemeProvider theme={theme}>
             <QueryClientProvider client={queryClient}>
+              <Loading/>
               <Container>
                 <Component {...pageProps} dir={dir} auth={auth} />
               </Container>

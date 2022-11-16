@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import React from 'react';
+import { useAuth } from '../Components/Auth/hooks/useAuth';
 import { LangHelper } from '../Helper/MultiLangHelper/LangHelper';
 
 export default function Home() {
+  const { } = useAuth()
   return (
     <main>
       <Head>

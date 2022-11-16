@@ -22,4 +22,11 @@ a {
     color: white;
     background: black;
   }
+}
+.loadingalert {
+  position: absolute;
+  width: 310px;
+  bottom: 20px;
+  left: 30px;
+  background-color: aqua;
 }/*# sourceMappingURL=globals.css.map */
