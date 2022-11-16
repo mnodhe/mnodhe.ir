@@ -14,6 +14,9 @@ import en from "../lang/en.json";
 import fa from "../lang/fa.json";
 import { configureStore } from "@reduxjs/toolkit";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from '../Helper/react-query/queryClient';
 export const ColorModeContext = createContext({ toggleColorMode: () => { } });
 
 export const messages: any = {
@@ -102,9 +105,13 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
       >
         <ColorModeContext.Provider value={colorMode}>
           <ThemeProvider theme={theme}>
-            <Container>
-              <Component {...pageProps} dir={dir} auth={auth} />
-            </Container>
+            <QueryClientProvider client={queryClient}>
+              <Container>
+                <Component {...pageProps} dir={dir} auth={auth} />
+              </Container>
+              {/* The rest of your application */}
+              <ReactQueryDevtools initialIsOpen={false} />
+            </QueryClientProvider>
           </ThemeProvider>
         </ColorModeContext.Provider>
       </IntlProvider>
