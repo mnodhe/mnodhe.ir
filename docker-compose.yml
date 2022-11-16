@@ -1,12 +1,12 @@
 version: '3.9'
 services:
-  imlucky-frontend-ssr:
+  mnodheir-frontend-ssr:
     build:
       context: .
       dockerfile: Dockerfilesitenextjs
     networks:
       mybackendnetwork:
-        ipv4_address: 172.30.0.108
+        ipv4_address: 172.30.0.109
     # volumes:
     #   - ./next.config.js:/next.config.js
     ports:
