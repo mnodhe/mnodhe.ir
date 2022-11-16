@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  imlucky-frontend-ssr:
+    build:
+      context: .
+      dockerfile: Dockerfilesitenextjs
+    networks:
+      mybackendnetwork:
+        ipv4_address: 172.30.0.108
+    # volumes:
+    #   - ./next.config.js:/next.config.js
+    ports:
+      - '7004:3000'
+    image: mnodheir-frontend-ssr
+    restart: always
+
+networks:
+  mybackendnetwork:
+    external: true
+volumes:
+  myminio:
+  certbotconfig:
+  certbotwww:
+  myfrontendwww:
+
