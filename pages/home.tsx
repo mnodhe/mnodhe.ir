@@ -3,6 +3,13 @@ import React from 'react';
 import { useAuth } from '../Components/Auth/hooks/useAuth';
 import { LangHelper } from '../Helper/MultiLangHelper/LangHelper';
 import ReactFullpage from '@fullpage/react-fullpage';
+import Section1 from '../Components/Home/Section1';
+import Section2 from '../Components/Home/Section2';
+import Section3 from '../Components/Home/Section3';
+import Section4 from '../Components/Home/Section4';
+import Section5 from '../Components/Home/Section5';
+import Section6 from '../Components/Home/Section6';
+import Section7 from '../Components/Home/Section7';
 export default function Home() {
   const { data } = useAuth()
 
@@ -17,22 +24,18 @@ export default function Home() {
         //fullpage options
         licenseKey={'YOUR_KEY_HERE'}
         scrollingSpeed={1000} /* Options here */
-
+        sectionsColor={["#34353A","#31333B","#3D3E42","#3D3E42","#34353A","#31333B"]}
         render={({ state, fullpageApi }) => {
           return (
-            <ReactFullpage.Wrapper>
-              <div className="section" color='red'>
-                <p>Section 1 (welcome to fullpage.js)</p>
-                <button onClick={() => fullpageApi.moveSectionDown()}>
-                  Click me to move down
-                </button>
-              </div>
-              <div className="section">
-                <p>Section 2</p>
-              </div>
-              <div className="section">
-                <p>Section 3</p>
-              </div>
+            <ReactFullpage.Wrapper
+            >
+              <Section1 fullpageApi={fullpageApi}/>
+              <Section2 fullpageApi={fullpageApi}/>
+              <Section3 fullpageApi={fullpageApi}/>
+              <Section4 fullpageApi={fullpageApi}/>
+              <Section5 fullpageApi={fullpageApi}/>
+              <Section6 fullpageApi={fullpageApi}/>
+              <Section7 fullpageApi={fullpageApi}/>
             </ReactFullpage.Wrapper>
           );
         }}
