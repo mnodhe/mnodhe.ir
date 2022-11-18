@@ -70,4 +70,12 @@ a {
 
 #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
   background-color: #ff5555 !important;
+}
+
+.mymediaContainer {
+  position: absolute;
+  right: 37px;
+  z-index: 4;
+  bottom: 111px;
+  --bs-gutter-x: unset!important;
 }/*# sourceMappingURL=globals.css.map */

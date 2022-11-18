@@ -79,6 +79,7 @@ export default function Header() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: 'text.primary',
+                backgroundColor:"#34353a",
                 borderRadius: 1,
                 p: 2,
             }}
@@ -126,6 +127,7 @@ export default function Header() {
                         aria-haspopup="true"
                         color="inherit"
                         size="small"
+                        variant='text'
                         aria-expanded={open ? "true" : undefined}
                         onClick={handleClick}
                         startIcon={<BsGlobe />}
