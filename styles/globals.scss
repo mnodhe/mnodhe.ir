@@ -13,11 +13,23 @@
   font-family: "Montserrat";
   src: url("../public/font/Montserrat/Montserrat-Regular.woff2");
 }
+.font-merri{
+  font-family: "Merriweather";
+}
+.font-mont{
+  font-family: "Montserrat";
+}
+.font-gold{
+  color: $secondarycolor!important;
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Merriweather"!important;;
+  font-family: "Montserrat"!important;;
+}
+.MuiButtonBase-root{
+  font-family: "Montserrat"!important;;
 }
 
 a {

@@ -110,7 +110,24 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
           fontFamily: 'Merriweather'
         },
         components:{
-          
+          MuiButton:{
+            defaultProps: {
+              variant: 'contained'
+            },
+            variants: [
+              {
+                props: { variant: 'outlined' },
+                style: {
+                  background: 'unset',
+                  border: '2px solid #F0BF6C',
+                  ":hover":{
+                    border: '2px solid #F0BF6C',
+                    background: '#F0BF6C',
+                  }
+                },
+              }
+            ]
+          }
         },
         palette: {
           mode,

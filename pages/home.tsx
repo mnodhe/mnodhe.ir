@@ -11,7 +11,7 @@ import Section5 from '../Components/Home/Section5';
 import Section6 from '../Components/Home/Section6';
 import Section7 from '../Components/Home/Section7';
 export default function Home() {
-  const { data } = useAuth()
+  // const { data } = useAuth()
   const anchors = ["Presentation", "About", "Skills", "News", "Experience", "Testimonial", "ContactMe"];
   return (
     <main>
