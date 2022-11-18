@@ -85,7 +85,12 @@ export default function Header() {
         >
             <div className="row mx-0 col-12">
                 <div className="col-2">
-                    <AppBar position="static" sx={{ color: "primary.main", bgcolor: "background.default", backgroundImage: "unset", boxShadow: "unset" }}>
+                    <AppBar position="static" 
+                    sx={{ color: "primary.main",
+                      bgcolor: "unset",
+                      backgroundImage: "unset",
+                      boxShadow: "unset"
+                   }}>
                         <Toolbar variant="dense">
                             <IconButton 
                              edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}

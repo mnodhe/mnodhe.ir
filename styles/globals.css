@@ -46,4 +46,12 @@ a {
 .fp-warning,
 .fp-watermark {
   display: none;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: #c3b58c !important;
+}
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+  background-color: #ff5555 !important;
 }/*# sourceMappingURL=globals.css.map */

@@ -12,8 +12,7 @@ import Section6 from '../Components/Home/Section6';
 import Section7 from '../Components/Home/Section7';
 export default function Home() {
   const { data } = useAuth()
-
-
+  const anchors = ["Presentation", "About", "Skills", "News", "Experience", "Testimonial", "ContactMe"];
   return (
     <main>
       <Head>
@@ -22,6 +21,9 @@ export default function Home() {
       </Head>
       <ReactFullpage
         //fullpage options
+        anchors={anchors}
+        navigation
+        navigationTooltips={anchors}
         licenseKey={'YOUR_KEY_HERE'}
         scrollingSpeed={1000} /* Options here */
         sectionsColor={["#34353A","#31333B","#3D3E42","#3D3E42","#34353A","#31333B"]}
