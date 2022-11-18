@@ -19,9 +19,12 @@ import Footer from "./Footer/Footer";
 export default function Container({ children }: any) {
     const dispatch = useDispatch();
     const router = useRouter();
+    const UIdirection = UseAppSelector((x) => x.UIData.direction);
     useEffect(() => {
         const handleRouteChange = (url: any) => {
-            gtag.pageview(url);
+            if (typeof window.gtag !== 'undefined') {
+                gtag.pageview(url);
+            }
         };
         router.events.on("routeChangeComplete", handleRouteChange);
         router.events.on("hashChangeComplete", handleRouteChange);
@@ -67,6 +70,7 @@ export default function Container({ children }: any) {
             sx={{
                 bgcolor: 'background.default',
                 color: 'text.primary',
+                direction:UIdirection
             }}
         >
             <Head>

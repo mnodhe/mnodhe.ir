@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
 import { Workbox } from "workbox-window";
 import { createContext, useEffect, useMemo, useState } from 'react';
 import { IntlProvider } from "react-intl";
@@ -20,16 +19,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import '../styles/globals.css';
 import Loading from '../Components/layout/Loading';
-import { fontFamily } from '@mui/system';
 
 export const ColorModeContext = createContext({ toggleColorMode: () => { } });
 
-export const messages: any = {
-  ae: ae,
-  en: en,
-  fa: fa,
-};
+
+
+
 export function getDirection(locale: string) {
+  debugger  
   if (locale === "ae" || locale === "fa") {
     return "rtl";
   }
@@ -52,6 +49,8 @@ export async function getServerSideProps() {
   const locale: any = router.locale!;
   let isAuth = false;
 
+
+
   return {
     props: {
       dir: getDirection(locale),
@@ -66,7 +65,18 @@ export async function getServerSideProps() {
 export default function MyApp({ Component, pageProps, dir, auth }: any) {
   const router = useRouter();
   const locale: any = router.locale!;
-
+  const messages = useMemo(() => {
+    switch (locale) {
+        case "fa":
+            return fa
+        case "en":
+            return en
+        case "ae":
+            return ae
+        default:
+            return en
+    }
+}, [locale])
   useEffect(() => {
     if (
       !("serviceWorker" in navigator) ||
@@ -131,7 +141,7 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
     <Provider store={store}>
       <IntlProvider
         locale={locale}
-        messages={flattenMessages(messages[locale])}
+        messages={flattenMessages(messages)}
       >
         <ColorModeContext.Provider value={colorMode}>
           <ThemeProvider theme={theme}>
@@ -159,7 +169,6 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
         pauseOnHover
       />
     </Provider>
-
   )
 }
 

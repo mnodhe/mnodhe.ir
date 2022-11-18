@@ -1,7 +1,7 @@
 import { UIDataRedux } from "../../../Interfaces/Redux_Interface";
 
 export let UIData_Red: UIDataRedux = {
-    direction: "rtl"
+    direction: "ltr"
 };
 const UIReducer = (state: UIDataRedux = UIData_Red, action: any) => {
     switch (action.type) {
