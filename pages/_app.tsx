@@ -99,6 +99,9 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
         typography: {
           fontFamily: 'Merriweather'
         },
+        components:{
+          
+        },
         palette: {
           mode,
           ...(mode === 'light' ?
