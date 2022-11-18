@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, IconButton, Menu, MenuItem, Tab, Tabs, Toolbar, Typography, useTheme } from '@mui/material'
+import { AppBar, Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Menu, MenuItem, Tab, Tabs, Toolbar, Typography, useTheme } from '@mui/material'
 import React, { useContext, useState } from 'react'
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
@@ -11,6 +11,8 @@ import { useRouter } from 'next/router';
 import { SetUIdirection_Action } from '../../../Helper/Redux/Actions/UI/UIAction';
 import { useDispatch } from 'react-redux';
 import { BsGlobe } from "react-icons/bs";
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
 
 export default function Header() {
     const theme = useTheme();
@@ -18,6 +20,7 @@ export default function Header() {
     const router = useRouter();
     const [tabValue, setTabValue] = useState("About")
     const colorMode = useContext(ColorModeContext);
+    const [isDrawerOpen, setisDrawerOpen] = useState<boolean>(false)
     const languages = [
         { code: "fa", name: "فارسی", country_code: "ir" },
         { code: "en", name: "English", country_code: "us" },
@@ -32,7 +35,41 @@ export default function Header() {
       const handleClose = () => {
         setAnchorEl(null);
       };
-    
+      const drawerlist = () => (
+        <Box
+          sx={{ width: 250 }}
+          role="presentation"
+          onClick={()=>setisDrawerOpen( false)}
+          onKeyDown={()=>setisDrawerOpen(false)}
+        >
+          <List>
+            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+              <ListItem key={text} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+          <Divider />
+          <List>
+            {['All mail', 'Trash', 'Spam'].map((text, index) => (
+              <ListItem key={text} disablePadding>
+                <ListItemButton>
+                  <ListItemIcon>
+                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      );
+      
     return (
         <Box
             sx={{
@@ -50,9 +87,19 @@ export default function Header() {
                 <div className="col-2">
                     <AppBar position="static" sx={{ color: "primary.main", bgcolor: "background.default", backgroundImage: "unset", boxShadow: "unset" }}>
                         <Toolbar variant="dense">
-                            <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+                            <IconButton 
+                             edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}
+                             onClick={()=>setisDrawerOpen(true)}
+                             >
                                 <MenuIcon />
                             </IconButton>
+                            <Drawer
+                              anchor={["ae","fa"].includes(router.locale!.toString()) ? "right" :"left"}
+                              open={isDrawerOpen}
+                              onClose={()=>setisDrawerOpen(false)}
+                            >
+                              {drawerlist()}
+                            </Drawer>
                             <Typography variant="h6" color="inherit" component="div">
                                 <Image className='col-12' width={90} height={55} src={theme.palette.mode==="light" ? darklogo : logo} alt="mnodhe Logo" />
                             </Typography>
