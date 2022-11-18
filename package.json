@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@fullpage/react-fullpage": "^0.1.30",
     "@mui/icons-material": "^5.10.14",
     "@mui/material": "^5.10.14",
     "@reduxjs/toolkit": "^1.9.0",

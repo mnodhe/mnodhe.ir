@@ -20,6 +20,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import '../styles/globals.css';
 import Loading from '../Components/layout/Loading';
+import { fontFamily } from '@mui/system';
 
 export const ColorModeContext = createContext({ toggleColorMode: () => { } });
 
@@ -80,7 +81,7 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
 
 
 
-  const [mode, setMode] = useState<'light' | 'dark'>('light');
+  const [mode, setMode] = useState<'light' | 'dark'>('dark');
   const colorMode = useMemo(
     () => ({
       toggleColorMode: () => {
@@ -95,8 +96,30 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
   const theme = useMemo(
     () =>
       createTheme({
+        typography: {
+          fontFamily: 'Merriweather'
+        },
         palette: {
           mode,
+          ...(mode === 'light' ?
+            {
+              background: {
+                default: "rgb(226, 226, 226)",
+              },
+              primary: {
+                main: "#000000",
+              },
+            }
+            :
+            {
+              background: {
+                default: "black",
+              },
+              primary: {
+                main: "#ffffff",
+              },
+            }
+          )
         },
       }),
     [mode],

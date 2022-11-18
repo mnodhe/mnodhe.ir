@@ -1,19 +1,18 @@
 @import "variable.scss";
 
-@mixin Font_regular($fontsize) {
-    font-family: "??" !important;
-    font-size: $fontsize !important;
-  }
-  
-  @mixin Font_Light($fontsize) {
-    font-family: "??" !important;
-    font-size: $fontsize !important;
-  }
-  
-  @mixin Font_Bold($fontsize) {
-    font-family: "??" !important;
-    font-size: $fontsize !important;
-  }
+
+@mixin Font_Merriweather_regular($fontsize) {
+  font-family: "Merriweather" !important;
+  font-size: $fontsize !important;
+}
+@mixin Font_Merriweather_italic($fontsize) {
+  font-family: "Merriweather-italic" !important;
+  font-size: $fontsize !important;
+}
+@mixin Font_Montserrat_regular($fontsize) {
+  font-family: "Montserrat" !important;
+  font-size: $fontsize !important;
+}
   
 @mixin noselect {
   -webkit-touch-callout: none;

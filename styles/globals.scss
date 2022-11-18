@@ -1,11 +1,22 @@
 @import "variable.scss";
 @import "mixins.scss";
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../public/font/Merriweather/Merriweather-Regular1.woff2");
+}
+@font-face {
+  font-family: "Merriweather-italic";
+  src: url("../public/font/Merriweather/Merriweather-italic.woff2");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/font/Montserrat/Montserrat-Regular.woff2");
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -27,9 +38,13 @@ a {
   }
 }
 .loadingalert {
-  position: absolute;
+  position: fixed;
   width: 310px;
   bottom: 20px;
   left: 30px;
   background-color: $loadingBGColor;
+}
+.fp-warning,
+.fp-watermark {
+  display: none;
 }
