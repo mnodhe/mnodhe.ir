@@ -1,0 +1,16 @@
+{
+    "name": "mnodhe's Personal Site",
+    "short_name": "mnodhe Resume",
+    "Description": "mnodhe's personal site is an open source site developed in nextjs and served via docker for showing my programming skills in javascrit developement.",
+    "start_url": "https://mnodhe.ir/",
+    "id": "/",
+    "Orientation": "portrait",
+    "icons":[
+        {"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},
+        {"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}
+    ],
+    "theme_color": "#F0BF6C",
+    "background_color": "#48494F",
+    "display": "standalone",
+    "splash_pages": null
+}

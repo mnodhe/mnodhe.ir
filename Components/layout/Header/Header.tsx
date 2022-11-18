@@ -6,6 +6,7 @@ import { ColorModeContext, getDirection } from '../../../pages/_app';
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from 'next/image'
 import logo from '../../../public/logo.png'
+import darklogo from '../../../public/logo-dark.png'
 import { useRouter } from 'next/router';
 import { SetUIdirection_Action } from '../../../Helper/Redux/Actions/UI/UIAction';
 import { useDispatch } from 'react-redux';
@@ -53,7 +54,7 @@ export default function Header() {
                                 <MenuIcon />
                             </IconButton>
                             <Typography variant="h6" color="inherit" component="div">
-                                <Image className='col-12' width={90} height={55} src={logo} alt="mnodhe Logo" />
+                                <Image className='col-12' width={90} height={55} src={theme.palette.mode==="light" ? darklogo : logo} alt="mnodhe Logo" />
                             </Typography>
                         </Toolbar>
                     </AppBar>
