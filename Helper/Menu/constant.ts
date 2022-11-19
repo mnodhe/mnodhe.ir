@@ -1,0 +1,1 @@
+export const MenuListanchors = ["Presentation", "About", "Skills", "News", "Experience", "Testimonial", "ContactMe"];

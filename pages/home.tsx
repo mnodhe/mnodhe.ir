@@ -10,9 +10,12 @@ import Section4 from '../Components/Home/Section4';
 import Section5 from '../Components/Home/Section5';
 import Section6 from '../Components/Home/Section6';
 import Section7 from '../Components/Home/Section7';
+import { MenuListanchors } from '../Helper/Menu/constant';
+import { useTheme } from '@mui/material';
 export default function Home() {
   // const { data } = useAuth()
-  const anchors = ["Presentation", "About", "Skills", "News", "Experience", "Testimonial", "ContactMe"];
+  const theme = useTheme();
+
   return (
     <main>
       <Head>
@@ -21,23 +24,23 @@ export default function Home() {
       </Head>
       <ReactFullpage
         //fullpage options
-        anchors={anchors}
+        anchors={MenuListanchors}
         navigation
-        navigationTooltips={anchors}
+        navigationTooltips={MenuListanchors}
         licenseKey={'YOUR_KEY_HERE'}
         scrollingSpeed={1000} /* Options here */
-        sectionsColor={["#34353A","#31333B","#3D3E42","#3D3E42","#34353A","#31333B"]}
-        render={({ state, fullpageApi }) => {
+        sectionsColor={theme.palette.mode === "light" ? ["rgb(249 246 246)", "rgb(241 240 240)", "rgb(249 246 246)", "rgb(241 241 241)", "rgb(249 246 246)", "rgb(235 235 235)"] : ["#34353A", "#31333B", "#3D3E42", "#3D3E42", "#34353A", "#31333B"]}
+        render={({ state, fullpageApi }: any) => {
           return (
             <ReactFullpage.Wrapper
             >
-              <Section1 fullpageApi={fullpageApi}/>
-              <Section2 fullpageApi={fullpageApi}/>
-              <Section3 fullpageApi={fullpageApi}/>
-              <Section4 fullpageApi={fullpageApi}/>
-              <Section5 fullpageApi={fullpageApi}/>
-              <Section6 fullpageApi={fullpageApi}/>
-              <Section7 fullpageApi={fullpageApi}/>
+              <Section1 fullpageApi={fullpageApi} />
+              <Section2 fullpageApi={fullpageApi} />
+              <Section3 fullpageApi={fullpageApi} />
+              <Section4 fullpageApi={fullpageApi} />
+              <Section5 fullpageApi={fullpageApi} />
+              <Section6 fullpageApi={fullpageApi} />
+              <Section7 fullpageApi={fullpageApi} />
             </ReactFullpage.Wrapper>
           );
         }}
