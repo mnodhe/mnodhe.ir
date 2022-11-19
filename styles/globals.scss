@@ -13,23 +13,23 @@
   font-family: "Montserrat";
   src: url("../public/font/Montserrat/Montserrat-Regular.woff2");
 }
-.font-merri{
+.font-merri {
   font-family: "Merriweather";
 }
-.font-mont{
+.font-mont {
   font-family: "Montserrat";
 }
-.font-gold{
-  color: $secondarycolor!important;
+.font-gold {
+  color: $secondarycolor !important;
 }
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Montserrat"!important;;
+  font-family: "Montserrat" !important;
 }
-.MuiButtonBase-root{
-  font-family: "Montserrat"!important;;
+.MuiButtonBase-root {
+  font-family: "Montserrat" !important;
 }
 
 a {
@@ -61,17 +61,32 @@ a {
 .fp-watermark {
   display: none;
 }
-#fp-nav ul li a span, .fp-slidesNav ul li a span{
-  background: #c3b58c!important;
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #c3b58c !important;
 }
-#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span{
-  background-color: $FavRedColor!important;
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  background-color: $FavRedColor !important;
 }
 
-.mymediaContainer{
+.mymediaContainer {
   position: absolute;
   right: 37px;
   z-index: 4;
   bottom: 30px;
-  --bs-gutter-x: unset!important;
+  --bs-gutter-x: unset !important;
+}
+.mypictureContainer {
+  position: absolute;
+  right: 200px;
+  z-index: 3;
+  bottom: 0px;
+  .mypicture {
+    height: auto;
+    width: 140%;
+    opacity: 0.8;
+  }
 }

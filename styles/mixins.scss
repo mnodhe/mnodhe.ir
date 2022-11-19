@@ -1,6 +1,5 @@
 @import "variable.scss";
 
-
 @mixin Font_Merriweather_regular($fontsize) {
   font-family: "Merriweather" !important;
   font-size: $fontsize !important;
@@ -13,7 +12,7 @@
   font-family: "Montserrat" !important;
   font-size: $fontsize !important;
 }
-  
+
 @mixin noselect {
   -webkit-touch-callout: none;
   /* iOS Safari */
