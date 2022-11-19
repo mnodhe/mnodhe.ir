@@ -14,9 +14,13 @@ import { useRouter } from 'next/router';
 import { SetUIdirection_Action } from '../../../Helper/Redux/Actions/UI/UIAction';
 import { useDispatch } from 'react-redux';
 import { BsGlobe } from "react-icons/bs";
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { MenuListanchors } from '../../../Helper/Menu/constant';
+import { GiSkills } from 'react-icons/gi';
+import { FcVoicePresentation, FcAbout } from 'react-icons/fc';
+import { AiFillExperiment } from 'react-icons/ai';
+import { BsNewspaper } from 'react-icons/bs';
+import { BiChat } from 'react-icons/bi';
+import { RiContactsBookFill } from 'react-icons/ri';
 
 export default function Header() {
     const theme = useTheme();
@@ -47,30 +51,66 @@ export default function Header() {
             onKeyDown={() => setisDrawerOpen(false)}
         >
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
+            <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <FcVoicePresentation />
+                        </ListItemIcon>
+                        <ListItemText primary="Presentation" />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <FcAbout />
+                        </ListItemIcon>
+                        <ListItemText primary="About" />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            < GiSkills/>
+                        </ListItemIcon>
+                        <ListItemText primary="Skills" />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <BsNewspaper />
+                        </ListItemIcon>
+                        <ListItemText primary="News" />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            < AiFillExperiment/>
+                        </ListItemIcon>
+                        <ListItemText primary="Experience" />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <BiChat />
+                        </ListItemIcon>
+                        <ListItemText primary="Testimonial" />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            < RiContactsBookFill/>
+                        </ListItemIcon>
+                        <ListItemText primary="ContactMe" />
+                    </ListItemButton>
+                </ListItem>
+
             </List>
             <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
+
         </Box>
     );
 
