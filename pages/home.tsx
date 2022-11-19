@@ -29,7 +29,10 @@ export default function Home() {
         navigationTooltips={MenuListanchors}
         licenseKey={'YOUR_KEY_HERE'}
         scrollingSpeed={1000} /* Options here */
-        sectionsColor={theme.palette.mode === "light" ? ["rgb(249 246 246)", "rgb(241 240 240)", "rgb(249 246 246)", "rgb(241 241 241)", "rgb(249 246 246)", "rgb(235 235 235)"] : ["#34353A", "#31333B", "#3D3E42", "#3D3E42", "#34353A", "#31333B"]}
+        sectionsColor={theme.palette.mode === "light" ?
+          ["rgb(249 246 246)", "rgb(241 240 240)", "rgb(249 246 246)", "rgb(241 241 241)", "rgb(249 246 246)", "rgb(235 235 235)"]
+          :
+          ["#34353A", "#31333B", "#3D3E42", "#3D3E42", "#34353A", "#31333B"]}
         render={({ state, fullpageApi }: any) => {
           return (
             <ReactFullpage.Wrapper
