@@ -4,7 +4,7 @@ import React from 'react'
 export default function Section2(props: { fullpageApi: fullpageApi }) {
   return (
     <div className="section" >
-      <div className="row col-12 p-5 ">
+      <div className="row col-12 p-5">
         <h1 className='font-mont fs-2 fw-bold mt-5'>About</h1>
 
         {/* <p className='font-merri'>

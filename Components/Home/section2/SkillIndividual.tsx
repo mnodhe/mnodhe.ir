@@ -2,7 +2,6 @@ import { Card, Tooltip } from '@mui/material'
 import React from 'react'
 import Image from 'next/image'
 import Tilt from 'react-parallax-tilt';
-import { useTheme } from '@tanstack/react-query-devtools/build/lib/theme';
 
 export default function SkillIndividual(props: { Image: any, Skill: string }) {
     return (

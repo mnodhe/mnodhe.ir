@@ -121,4 +121,9 @@ a {
   font-size: 35px;
   font-style: italic;
   transform: translateZ(60px);
+}
+
+.portfolioimage {
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=globals.css.map */
