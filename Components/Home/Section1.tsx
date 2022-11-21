@@ -56,7 +56,7 @@ export default function Section1(props: { fullpageApi: fullpageApi }) {
           </div>
         </div>
         <div className="col-12 col-lg-5 d-none d-lg-block mypictureContainer">
-          <Image src={MyPic} alt="mohammad mohammadi nodehi's picture" className=' mypicture' />
+          <Image src={MyPic} alt="mohammad mohammadi nodehi's picture" className='mypicture' />
         </div>
 
       </div>

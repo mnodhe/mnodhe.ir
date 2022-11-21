@@ -98,4 +98,17 @@ a {
 
 .myline {
   line-height: 57px;
+}
+
+.skillsContainer {
+  height: 12rem;
+}
+
+.myskillIcon {
+  width: 90px;
+  height: auto;
+}
+
+.imgcontainer {
+  height: 100px;
 }/*# sourceMappingURL=globals.css.map */

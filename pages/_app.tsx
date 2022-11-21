@@ -26,7 +26,7 @@ export const ColorModeContext = createContext({ toggleColorMode: () => { } });
 
 
 export function getDirection(locale: string) {
-  debugger  
+  debugger
   if (locale === "ae" || locale === "fa") {
     return "rtl";
   }
@@ -67,16 +67,16 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
   const locale: any = router.locale!;
   const messages = useMemo(() => {
     switch (locale) {
-        case "fa":
-            return fa
-        case "en":
-            return en
-        case "ae":
-            return ae
-        default:
-            return en
+      case "fa":
+        return fa
+      case "en":
+        return en
+      case "ae":
+        return ae
+      default:
+        return en
     }
-}, [locale])
+  }, [locale])
   useEffect(() => {
     if (
       !("serviceWorker" in navigator) ||
@@ -109,8 +109,24 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
         typography: {
           fontFamily: 'Merriweather'
         },
-        components:{
-          MuiButton:{
+        components: {
+          MuiCard: {
+            defaultProps: {
+              variant: 'elevation'
+            },
+            variants: [{
+              props: { variant: 'elevation' },
+              style: {
+                backgroundColor: "#48494F",
+                color: "white",
+                ":hover": {
+                  backgroundColor: "#F0BF6C",
+                  color: "black"
+                }
+              }
+            }]
+          },
+          MuiButton: {
             defaultProps: {
               variant: 'contained'
             },
@@ -120,7 +136,7 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
                 style: {
                   background: 'unset',
                   border: '2px solid #F0BF6C',
-                  ":hover":{
+                  ":hover": {
                     border: '2px solid #F0BF6C',
                     background: '#F0BF6C',
                   }
