@@ -35,14 +35,13 @@ export default function Section1(props: { fullpageApi: fullpageApi }) {
         <div className="col-12 col-lg-7">
           <div className="col-12">
             <span className='font-merri fw-bold fs-7 fs-lg-1'>I’M </span>
-            { }
-            <span className='font-mont font-gold fs-2'>Mohammad Mohammadi Nodehi</span>
+            <h3 className='font-mont font-gold fs-2'>Mohammad Mohammadi Nodehi</h3>
           </div>
-          <div className="col-12 font-mont font-gold fs-6">A.K.A mnodhe</div>
-          <div className="col-12 mt-2 font-merri fs-4">
+          <h2 className="col-12 font-mont font-gold fs-6">A.K.A mnodhe</h2>
+          <h2 className="col-12 mt-2 font-merri fs-4">
             Dotnet core & javascript <br />
             Developer
-          </div>
+          </h2>
           <div className="row col-12 mt-5">
             <div className="col-12 col-md-4 col-lg-4 col-xl-3">
               <a href="tel:+989120747823">

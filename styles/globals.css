@@ -35,7 +35,7 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 * {
@@ -94,4 +94,8 @@ a {
   height: auto;
   width: 140%;
   opacity: 0.8;
+}
+
+.myline {
+  line-height: 57px;
 }/*# sourceMappingURL=globals.css.map */
