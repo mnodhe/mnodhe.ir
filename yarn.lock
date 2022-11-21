@@ -3561,6 +3561,11 @@ react-is@^18.0.0, react-is@^18.2.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
+react-parallax-tilt@^1.7.69:
+  version "1.7.69"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.7.69.tgz#00544a0fa57c495fa3e89d3ce9b4ad1f25d6315e"
+  integrity sha512-FwqBQZ/MKESxazjpDdVNIdL4WVH/DfnKoseF7gGg0hMljiLjfRUx2XbpudqSaYXX0d9niF3zc+5TNgguoNOt1g==
+
 react-redux@^8.0.5:
   version "8.0.5"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-8.0.5.tgz#e5fb8331993a019b8aaf2e167a93d10af469c7bd"

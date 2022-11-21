@@ -111,4 +111,14 @@ a {
 
 .imgcontainer {
   height: 100px;
+}
+
+.inner-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-style: italic;
+  transform: translateZ(60px);
 }/*# sourceMappingURL=globals.css.map */
