@@ -114,5 +114,18 @@ a {
   transform: translateZ(60px);
 }
 .portfolioimage{
-  object-fit: cover;
+  object-fit: scale-down;
+}
+.portfoliohovertitle{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 5;
+  color: white;
+}
+.blur{
+ filter: blur(2px) brightness(0.5); 
 }
