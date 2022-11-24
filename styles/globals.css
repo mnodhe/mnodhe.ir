@@ -150,4 +150,14 @@ a {
 
 .text-align-justify {
   text-align: justify;
+}
+
+.testimonialbg {
+  width: 546px !important;
+  height: 320px;
+  background-color: #f0bf6c;
+  left: 77%;
+  position: absolute;
+  bottom: 28%;
+  border-radius: 20px 0px 0px 20px;
 }/*# sourceMappingURL=globals.css.map */

@@ -113,10 +113,10 @@ a {
   font-style: italic;
   transform: translateZ(60px);
 }
-.portfolioimage{
+.portfolioimage {
   object-fit: scale-down;
 }
-.portfoliohovertitle{
+.portfoliohovertitle {
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -126,13 +126,22 @@ a {
   z-index: 5;
   color: white;
 }
-.blur{
- filter: blur(2px) brightness(0.5); 
+.blur {
+  filter: blur(2px) brightness(0.5);
 }
-.MuiTimelineDot-filled{
+.MuiTimelineDot-filled {
   background-color: $secondarycolor !important;
   box-shadow: 0px 0px 9px #f0bf6c;
 }
-.text-align-justify{
+.text-align-justify {
   text-align: justify;
+}
+.testimonialbg {
+  width: 546px!important;
+    height: 320px;
+    background-color: #f0bf6c;
+    left: 77%;
+    position: absolute;
+    bottom: 28%;
+    border-radius: 20px 0px 0px 20px;
 }

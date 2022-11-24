@@ -7,7 +7,6 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import { Typography } from '@mui/material';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 
 export default function TimeLineIndividual(props:
     {
