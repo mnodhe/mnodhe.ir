@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function PortfolioIndividual(props: { image: any, imageAlt: string,summery:string,Technology:string[] }) {
     const [hover, setHover] = useState(false)
     return (
-        <div className='col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-3 text-center mt-3'>
+        <div className='col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 text-center mt-3'>
             <Card  
                 elevation={1}
                 className="col-12 skillsContainer inner-element p-0"

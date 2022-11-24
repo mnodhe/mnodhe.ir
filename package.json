@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.10.5",
     "@fullpage/react-fullpage": "^0.1.30",
     "@mui/icons-material": "^5.10.14",
+    "@mui/lab": "^5.0.0-alpha.109",
     "@mui/material": "^5.10.14",
     "@reduxjs/toolkit": "^1.9.0",
     "@tanstack/react-query": "^4.16.1",
