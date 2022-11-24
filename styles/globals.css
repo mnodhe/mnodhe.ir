@@ -61,7 +61,7 @@ a {
 
 .fp-warning,
 .fp-watermark {
-  display: none;
+  display: none !important;
 }
 
 #fp-nav ul li a span,
