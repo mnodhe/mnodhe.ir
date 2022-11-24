@@ -13,7 +13,6 @@ RUN yarn install --frozen-lockfile
 FROM node:lts-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
-COPY --from=deps /app/public/Assets ./public/Assets
 COPY . .
 
 # Next.js collects completely anonymous telemetry data about general usage.
