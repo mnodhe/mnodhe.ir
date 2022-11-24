@@ -1,5 +1,5 @@
-import { fullpageApi } from '@fullpage/react-fullpage'
 import React from 'react'
+import { fullpageApi } from '@fullpage/react-fullpage'
 import PortfolioIndividual from './section4/PortfolioIndividual'
 import cinematicket from '../../public/Assets/portfolio/cinematicket.jpg'
 import ghasedak from '../../public/Assets/portfolio/ghasedak.jpg'
