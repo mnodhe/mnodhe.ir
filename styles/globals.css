@@ -57,6 +57,7 @@ a {
   bottom: 20px;
   left: 30px;
   background-color: #f6f6f6;
+  z-index: 1;
 }
 
 .fp-warning,
@@ -160,4 +161,12 @@ a {
   position: absolute;
   bottom: 28%;
   border-radius: 20px 0px 0px 20px;
+}
+
+.text-webkit-center {
+  text-align: -webkit-center;
+}
+
+.fs-7 {
+  font-size: 0.8rem !important;
 }/*# sourceMappingURL=globals.css.map */

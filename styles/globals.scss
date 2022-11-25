@@ -56,10 +56,11 @@ a {
   bottom: 20px;
   left: 30px;
   background-color: $loadingBGColor;
+  z-index: 1;
 }
 .fp-warning,
 .fp-watermark {
-  display: none!important;
+  display: none !important;
 }
 
 #fp-nav ul li a span,
@@ -138,11 +139,17 @@ a {
   text-align: justify;
 }
 .testimonialbg {
-  width: 546px!important;
-    height: 320px;
-    background-color: #f0bf6c;
-    left: 77%;
-    position: absolute;
-    bottom: 28%;
-    border-radius: 20px 0px 0px 20px;
+  width: 546px !important;
+  height: 320px;
+  background-color: #f0bf6c;
+  left: 77%;
+  position: absolute;
+  bottom: 28%;
+  border-radius: 20px 0px 0px 20px;
+}
+.text-webkit-center {
+  text-align: -webkit-center;
+}
+.fs-7{
+  font-size: 0.8rem!important;
 }

@@ -110,6 +110,17 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
           fontFamily: 'Merriweather'
         },
         components: {
+          MuiCircularProgress: {
+            variants: [
+              {
+                props: { variant: "indeterminate" },
+                style: {
+                  color: mode === "dark" ? "#ff5555" : "black"
+                }
+              }
+            ]
+
+          },
           MuiCard: {
             defaultProps: {
               variant: 'elevation'
@@ -150,8 +161,6 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
                   color: mode === "dark" ? "white" : "black",
                   ":hover": {
                     background: '#F0BF6C',
-                    color: mode === "dark" ? "white" : "black",
-
                   }
                 }
               }

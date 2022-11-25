@@ -1,3 +1,4 @@
 export const queryKeys = {
-    refreshToken: "refreshToken"
+    refreshToken: "refreshToken",
+    stackoverflow:"stackoverflow"
 }

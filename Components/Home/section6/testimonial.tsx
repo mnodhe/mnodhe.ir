@@ -7,9 +7,8 @@ export default function Testimonial(props: { image: any, name: string, link: str
 
             <div className="col-7 m-auto">
                 <h1 className='font-mont fs-1 fw-bold text-center mt-5'>Testimonial</h1>
-
                 <div className="d-flex align-self-center mt-5">
-                    <Avatar alt="Remy Sharp" src={props.image} sx={{ width: 56, height: 56 }} />
+                    <Avatar alt={props.name} src={props.image} sx={{ width: 56, height: 56 }} />
                     <Link href={props.link} target="_blank" className="col-6  align-self-center font-merri mx-2">
                         <span className='font-mont'>
                             {props.name}

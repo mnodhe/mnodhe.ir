@@ -8,9 +8,9 @@ export default function Loading() {
     return (
         <div className={display} >
             <div className="col-3">
-                <CircularProgress />
+                <CircularProgress  variant='indeterminate'/>
             </div>
-            <div className="col-6 align-self-center ">
+            <div className="col-6 align-self-center fs-7">
                 Fetching Data ...
             </div>
         </div>
