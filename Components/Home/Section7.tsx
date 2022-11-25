@@ -6,12 +6,10 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
 import { useStackoverflow } from '../Auth/hooks/useStackoverflow';
-import { Skeleton } from "@mui/lab";
-import { useAuth } from '../Auth/hooks/useAuth';
 
 export default function Section7(props: { fullpageApi: fullpageApi }) {
-  const { data, isLoading } = useStackoverflow()
-  console.log('data', data)
+  const { items } = useStackoverflow()
+  console.log('data', items)
   return (
     <div className="section" >
       <Divider className='fs-1 font-gold font-mont'>Contact Me</Divider>
@@ -39,11 +37,6 @@ export default function Section7(props: { fullpageApi: fullpageApi }) {
             </div>
             <div className='col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-4 mt-3 '>
               <Button type='button' className='col-12' variant='contained' startIcon={<LocationOnIcon />}>Iran,Tehran</Button>
-            </div>
-            <div className="col-12 mt-5 text-center fs-4 font-merri font-gold">
-              {
-                data?.items[0].reputation
-              }
             </div>
             <div className="col-12 mt-5 text-center fs-4 font-merri font-gold">
               {"<"} Open to Relocation via Visa SponsorShip {"/>"}
