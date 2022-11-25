@@ -124,7 +124,8 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
                   color: "black"
                 }
               }
-            }]
+            },
+            ]
           },
           MuiButton: {
             defaultProps: {
@@ -141,6 +142,18 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
                     background: '#F0BF6C',
                   }
                 },
+              },
+              {
+                props: { variant: 'contained' },
+                style: {
+                  background: '#48494F',
+                  color: mode === "dark" ? "white" : "black",
+                  ":hover": {
+                    background: '#F0BF6C',
+                    color: mode === "dark" ? "white" : "black",
+
+                  }
+                }
               }
             ]
           }
