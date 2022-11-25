@@ -8,8 +8,7 @@ import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
 import { useStackoverflow } from '../Auth/hooks/useStackoverflow';
 
 export default function Section7(props: { fullpageApi: fullpageApi }) {
-  const { items } = useStackoverflow()
-  console.log('data', items)
+  // const { items } = useStackoverflow()
   return (
     <div className="section" >
       <Divider className='fs-1 font-gold font-mont'>Contact Me</Divider>
