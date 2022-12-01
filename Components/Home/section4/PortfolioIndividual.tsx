@@ -32,8 +32,8 @@ export default function PortfolioIndividual(props: { image: any, imageAlt: strin
         </div>
         <img
           src={props.image}
-          fill
-          objectFit='cover'
+          // fill
+          // objectFit='cover'
           alt={props.imageAlt}
           className={hover ? "col-12 portfolioimage blur" : "col-12 portfolioimage"}
         />
