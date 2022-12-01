@@ -30,7 +30,7 @@ export default function PortfolioIndividual(props: { image: any, imageAlt: strin
           </div>
 
         </div>
-        <Image
+        <img
           src={props.image}
           fill
           objectFit='cover'
