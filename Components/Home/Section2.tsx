@@ -1,28 +1,20 @@
-import { fullpageApi } from '@fullpage/react-fullpage'
-import React from 'react'
+import { fullpageApi } from '@fullpage/react-fullpage';
+import React from 'react';
 
 export default function Section2(props: { fullpageApi: fullpageApi }) {
   return (
-    <div className="section" >
-      <div className="row col-12 p-5">
-        <h1 className='font-mont fs-2 fw-bold mt-5'>About</h1>
+      <div className="section">
+        <div className="row col-12 p-5">
+          <h1 className='font-mont fs-2 fw-bold mt-5'>About Me</h1>
 
-        {/* <p className='font-merri'>
-          .Netcore & Front-End Developer with over 4 years of experience, 
-          <span className='font-gold'> loves working in teams </span>
-          and sharing his knowledge with others. Also, He is passionate about creating
-          products that help people make their lives easier. Furthermore, trying new
-          things in his job is his favorite.
-        </p> */}
-        <p className='font-merri myline fs-6  px-0 fs-lg-5'>
-          I'm a .NetCore And Front-End Engineer based in Iran ☀️. I describe myself as a passionate developer who loves <b> coding, open source, and the web platform </b> ❤️.
-          <br />
-          Aside from my job, I like to create and contribute to open source projects. That helps me to learn a ton of new stuff, grow as a developer
-          and support other open source projects.
-          {/* Also I enjoy writing technical things ✍️ at my blog. */}
-        </p>
-
+          <p className='font-merri myline fs-6 px-0 fs-lg-5'>
+            I'm a <b>Senior Software Engineer</b> with over <b>7 years of experience</b> in full-stack development, specializing in <b>C#, JavaScript, Python, and React.js</b>. Based in Iran ☀️, I am passionate about building scalable, efficient, and user-friendly applications that solve real-world problems.
+            <br /><br />
+            I thrive in collaborative environments and enjoy leading cross-functional teams to deliver innovative solutions. My expertise includes designing and optimizing systems, integrating AI features, and developing intuitive user interfaces that enhance user engagement and satisfaction.
+            <br /><br />
+            Outside of work, I contribute to <b>open-source projects</b> and continuously explore new technologies to stay ahead in the ever-evolving tech landscape. I believe in the power of sharing knowledge and fostering a culture of learning and growth.
+          </p>
+        </div>
       </div>
-    </div>
-  )
+  );
 }

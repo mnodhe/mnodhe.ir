@@ -93,8 +93,8 @@ a {
 }
 .mypictureContainer .mypicture {
   height: auto;
-  width: 140%;
-  opacity: 0.8;
+  width: 100%;
+  opacity: 0.5;
 }
 
 .myline {
@@ -125,8 +125,7 @@ a {
 }
 
 .portfolioimage {
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  object-fit: scale-down;
 }
 
 .portfoliohovertitle {
@@ -169,4 +168,6 @@ a {
 
 .fs-7 {
   font-size: 0.8rem !important;
-}/*# sourceMappingURL=globals.css.map */
+}
+
+/*# sourceMappingURL=globals.css.map */
