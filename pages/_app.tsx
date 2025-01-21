@@ -19,7 +19,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import '../styles/globals.css';
 import Loading from '../Components/layout/Loading';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 export const ColorModeContext = createContext({ toggleColorMode: () => { } });
 
 
@@ -223,6 +223,7 @@ export default function MyApp({ Component, pageProps, dir, auth }: any) {
         draggable
         pauseOnHover
       />
+      <SpeedInsights/>
     </Provider>
   )
 }
