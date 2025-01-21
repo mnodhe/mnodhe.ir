@@ -7,11 +7,11 @@ const nextConfig = {
   images: {
     domains: ["cdn.tabinu.com"],
   },
-  workbox: {
-    // .
-    // ..
-    // ... any workbox-webpack-plugin.GenerateSW option
-  },
+  // workbox: {
+  //   // .
+  //   // ..
+  //   // ... any workbox-webpack-plugin.GenerateSW option
+  // },
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
